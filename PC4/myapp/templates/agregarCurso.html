@@ -6,6 +6,33 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Agregar curso</h1>
+    <form action="/registrarCurso/" method="POST" class="form-container">{% csrf_token %}
+        <h2 class="form-title">Ingresar Nuevo Curso</h2>
+    
+        <table class="form-table">
+            <tr class="form-row">
+                <td><label for="code" class="form-label">Código:</label></td>
+                <td><input type="text" id="code" name="code" minlength="8" maxlength="8" autofocus required class="form-input"></td>
+            </tr>
+            <tr>
+                <td><label for="name" class="form-label">Nombre:</label></td>
+                <td><input type="text" id="name" name="name" minlength="3" maxlength="30" autofocus required class="form-input"></td>
+            </tr>
+            <tr>
+                <td><label for="hour" class="form-label">Horas:</label></td>
+                <td><input type="number" id="hour" name="hour" minlength="1" maxlength="1" required autofocus class="form-input"></td>
+            </tr>
+            <tr>
+                <td><label for="credits" class="form-label">Créditos:</label></td>
+                <td><input type="number" id="credits" name="credits" minlength="1" maxlength="1" required autofocus class="form-input"></td>
+            </tr>
+            <tr>
+                <td><label for="state" class="form-label">Estado:</label></td>
+                <td><input type="text" id="state" name="state" minlength="1" maxlength="1" required autofocus class="form-input"></td>
+            </tr>
+        </table>
+    
+        <button type="submit" class="form-button">Guardar Curso</button>
+    </form>
 </body>
 </html>

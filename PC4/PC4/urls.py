@@ -26,5 +26,6 @@ urlpatterns = [
     path('listadocarreras/',views.listadocarreras, name='listadocarreras'),
     path('agregarcurso/',views.agregarcurso, name='agregarcurso'),
     path('agregarcarreras/',views.agregarcarreras, name='agregarcarreras'),
-    
+    path('eliminarcurso/<int:idcourse>/',views.eliminar_curso, name='eliminar_curso'),
+    path('registrarCurso/', views.registrar_curso, name='registrar_curso'),
 ]   
